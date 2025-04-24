@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  api:
+    image: mcr.microsoft.com/dotnet/aspnet:7.0
+    container_name: todo_api
+    build:
+      context: .
+      dockerfile: TasneemSami.ToDoList.Api/Dockerfile
+    ports:
+      - "5000:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=db;Database=ToDoListDb;User=sa;Password=YourStrong!Pass123;
+    depends_on:
+      - db
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: sql_server
+    environment:
+      SA_PASSWORD: "YourStrong!Pass123"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+    volumes:
+      - sqlvolume:/var/opt/mssql
+
+volumes:
+  sqlvolume:
