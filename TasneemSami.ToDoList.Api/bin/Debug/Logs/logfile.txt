@@ -1,0 +1,227 @@
+2025-04-24 09:37:11.9228 | DEBUG | Registered model binder providers, in the following order: Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BinderTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ServicesModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.BodyModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.HeaderModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FloatingPointTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.EnumTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DateTimeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.SimpleTypeModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CancellationTokenModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ByteArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormFileModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.FormCollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.KeyValuePairModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.DictionaryModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ArrayModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.CollectionModelBinderProvider, Microsoft.AspNetCore.Mvc.ModelBinding.Binders.ComplexObjectModelBinderProvider
+2025-04-24 09:37:12.5291 | DEBUG | An 'IServiceProvider' was created for internal use by Entity Framework.
+2025-04-24 09:37:14.5548 | INFO | Entity Framework Core 6.0.36 initialized 'ToDoListDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-04-24 09:37:14.7232 | DEBUG | Opening connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:20.2868 | DEBUG | Opened connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:20.3066 | DEBUG | Creating DbCommand for 'ExecuteNonQuery'.
+2025-04-24 09:37:20.3212 | DEBUG | Created DbCommand for 'ExecuteNonQuery' (9ms).
+2025-04-24 09:37:20.3541 | DEBUG | Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2025-04-24 09:37:20.5049 | INFO | Executed DbCommand (154ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT 1
+2025-04-24 09:37:20.5049 | DEBUG | Closing connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:20.5498 | DEBUG | Closed connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:20.5698 | DEBUG | Creating DbCommand for 'ExecuteScalar'.
+2025-04-24 09:37:20.5698 | DEBUG | Created DbCommand for 'ExecuteScalar' (0ms).
+2025-04-24 09:37:20.5698 | DEBUG | Opening connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:20.5698 | DEBUG | Opened connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:20.5786 | DEBUG | Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-04-24 09:37:20.9647 | INFO | Executed DbCommand (392ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2025-04-24 09:37:20.9647 | DEBUG | Closing connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:20.9647 | DEBUG | Closed connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:21.4963 | DEBUG | Compiling query expression: 
+'DbSet<Users>()
+    .Any()'
+2025-04-24 09:37:22.4950 | DEBUG | Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<bool>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> 0
+        SELECT EXISTS (
+            SELECT 1
+            FROM Users AS u)), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, bool>, 
+    TasneemSami.ToDoList.Database.Data.ToDoListDbContext, 
+    False, 
+    False, 
+    True
+)
+    .Single()'
+2025-04-24 09:37:22.7247 | DEBUG | Creating DbCommand for 'ExecuteReader'.
+2025-04-24 09:37:22.7247 | DEBUG | Created DbCommand for 'ExecuteReader' (2ms).
+2025-04-24 09:37:22.7247 | DEBUG | Opening connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:22.7247 | DEBUG | Opened connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:22.7247 | DEBUG | Executing DbCommand [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-04-24 09:37:22.7628 | INFO | Executed DbCommand (28ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Users] AS [u]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2025-04-24 09:37:22.7706 | DEBUG | A data reader was disposed.
+2025-04-24 09:37:22.7706 | DEBUG | Closing connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:22.7706 | DEBUG | Closed connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:22.7706 | DEBUG | 'ToDoListDbContext' disposed.
+2025-04-24 09:37:22.7706 | DEBUG | Hosting starting
+2025-04-24 09:37:22.8654 | INFO | User profile is available. Using 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2025-04-24 09:37:22.8858 | DEBUG | Reading data from file 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys\key-1a3aa818-ca51-4055-900f-5a27251e4b5a.xml'.
+2025-04-24 09:37:22.8858 | DEBUG | Reading data from file 'C:\Users\Asus\AppData\Local\ASP.NET\DataProtection-Keys\key-23fbc7d0-376b-41f1-9a3d-c6a02d869252.xml'.
+2025-04-24 09:37:22.9332 | DEBUG | Found key {1a3aa818-ca51-4055-900f-5a27251e4b5a}.
+2025-04-24 09:37:22.9485 | DEBUG | Found key {23fbc7d0-376b-41f1-9a3d-c6a02d869252}.
+2025-04-24 09:37:22.9626 | DEBUG | Considering key {23fbc7d0-376b-41f1-9a3d-c6a02d869252} with expiration date 2025-05-15 10:59:49Z as default key.
+2025-04-24 09:37:22.9626 | DEBUG | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-04-24 09:37:22.9626 | DEBUG | Decrypting secret element using Windows DPAPI.
+2025-04-24 09:37:22.9698 | DEBUG | Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2025-04-24 09:37:22.9698 | DEBUG | Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2025-04-24 09:37:22.9698 | DEBUG | Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2025-04-24 09:37:22.9698 | DEBUG | Using key {23fbc7d0-376b-41f1-9a3d-c6a02d869252} as the default key.
+2025-04-24 09:37:22.9698 | DEBUG | Key ring with default key {23fbc7d0-376b-41f1-9a3d-c6a02d869252} was loaded during application startup.
+2025-04-24 09:37:23.2795 | DEBUG | Using development certificate: CN=localhost (Thumbprint: 42F8245C6B03945E786A15B63B22DF05AA6B22D1)
+2025-04-24 09:37:23.3742 | INFO | Now listening on: https://localhost:7179
+2025-04-24 09:37:23.3742 | INFO | Now listening on: http://localhost:5105
+2025-04-24 09:37:23.3742 | DEBUG | Loaded hosting startup assembly TasneemSami.ToDoList.Api
+2025-04-24 09:37:23.3742 | DEBUG | Loaded hosting startup assembly Microsoft.WebTools.ApiEndpointDiscovery
+2025-04-24 09:37:23.3742 | DEBUG | Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2025-04-24 09:37:23.3742 | DEBUG | Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2025-04-24 09:37:23.5124 | INFO | Application started. Press Ctrl+C to shut down.
+2025-04-24 09:37:23.5124 | INFO | Hosting environment: Development
+2025-04-24 09:37:23.5124 | INFO | Content root path: C:\Users\Asus\source\repos\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Api\
+2025-04-24 09:37:23.5124 | DEBUG | Hosting started
+2025-04-24 09:37:23.5710 | DEBUG | Connection id "0HNC2V9SBU76S" received FIN.
+2025-04-24 09:37:23.5710 | DEBUG | Connection id "0HNC2V9SBU76S" accepted.
+2025-04-24 09:37:23.5839 | DEBUG | Connection id "0HNC2V9SBU76S" started.
+2025-04-24 09:37:23.6428 | DEBUG | Failed to authenticate HTTPS connection.
+2025-04-24 09:37:23.6428 | DEBUG | Connection id "0HNC2V9SBU76S" stopped.
+2025-04-24 09:37:23.6428 | DEBUG | Connection id "0HNC2V9SBU76S" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-24 09:37:24.0331 | DEBUG | Connection id "0HNC2V9SBU76T" accepted.
+2025-04-24 09:37:24.0331 | DEBUG | Connection id "0HNC2V9SBU76T" started.
+2025-04-24 09:37:24.1691 | DEBUG | Connection 0HNC2V9SBU76T established using the following protocol: Tls12
+2025-04-24 09:37:24.3531 | INFO | Request starting HTTP/2 GET https://localhost:7179/swagger/index.html - -
+2025-04-24 09:37:24.8938 | DEBUG | Wildcard detected, all requests with hosts will be allowed.
+2025-04-24 09:37:24.9605 | DEBUG | No candidates found for the request path '/swagger/index.html'
+2025-04-24 09:37:24.9605 | DEBUG | Request did not match any endpoints
+2025-04-24 09:37:25.1552 | DEBUG | Response markup is scheduled to include Browser Link script injection.
+2025-04-24 09:37:25.1575 | DEBUG | Response markup is scheduled to include browser refresh script injection.
+2025-04-24 09:37:25.1809 | DEBUG | Response markup was updated to include Browser Link script injection.
+2025-04-24 09:37:25.1809 | DEBUG | Response markup was updated to include browser refresh script injection.
+2025-04-24 09:37:25.1952 | INFO | Request finished HTTP/2 GET https://localhost:7179/swagger/index.html - - - 200 - text/html;charset=utf-8 858.2960ms
+2025-04-24 09:37:25.4700 | INFO | Request starting HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - -
+2025-04-24 09:37:25.4700 | INFO | Request finished HTTP/2 GET https://localhost:7179/_framework/aspnetcore-browser-refresh.js - - - 200 12380 application/javascript;+charset=utf-8 6.2940ms
+2025-04-24 09:37:25.4700 | INFO | Request starting HTTP/2 GET https://localhost:7179/_vs/browserLink - -
+2025-04-24 09:37:25.7444 | INFO | Request finished HTTP/2 GET https://localhost:7179/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 267.5691ms
+2025-04-24 09:37:25.9308 | INFO | Request starting HTTP/2 GET https://localhost:7179/swagger/v1/swagger.json - -
+2025-04-24 09:37:25.9308 | DEBUG | No candidates found for the request path '/swagger/v1/swagger.json'
+2025-04-24 09:37:25.9308 | DEBUG | Request did not match any endpoints
+2025-04-24 09:37:26.9381 | INFO | Request finished HTTP/2 GET https://localhost:7179/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1007.2251ms
+2025-04-24 09:37:28.1575 | DEBUG | Connection id "0HNC2V9SBU76T" received FIN.
+2025-04-24 09:37:28.1575 | DEBUG | Connection id "0HNC2V9SBU76T" is closed. The last processed stream ID was 7.
+2025-04-24 09:37:28.1575 | DEBUG | Connection id "0HNC2V9SBU76T" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-24 09:37:28.1575 | DEBUG | Connection id "0HNC2V9SBU76T" stopped.
+2025-04-24 09:37:46.1659 | DEBUG | Connection id "0HNC2V9SBU76U" accepted.
+2025-04-24 09:37:46.1659 | DEBUG | Connection id "0HNC2V9SBU76U" started.
+2025-04-24 09:37:46.1795 | DEBUG | Connection 0HNC2V9SBU76U established using the following protocol: Tls12
+2025-04-24 09:37:46.1795 | INFO | Request starting HTTP/2 POST https://localhost:7179/api/Auth/login application/json 51
+2025-04-24 09:37:46.1908 | DEBUG | 1 candidate(s) found for the request path '/api/Auth/login'
+2025-04-24 09:37:46.1908 | DEBUG | Endpoint 'AuthController.Login (TasneemSami.ToDoList.Api)' with route pattern 'api/Auth/login' is valid for the request path '/api/Auth/login'
+2025-04-24 09:37:46.1908 | DEBUG | Request matched endpoint 'AuthController.Login (TasneemSami.ToDoList.Api)'
+2025-04-24 09:37:46.1908 | DEBUG | Static files was skipped as the request already matched an endpoint.
+2025-04-24 09:37:46.3436 | DEBUG | AuthenticationScheme: Bearer was not authenticated.
+2025-04-24 09:37:46.3436 | INFO | Executing endpoint 'AuthController.Login (TasneemSami.ToDoList.Api)'
+2025-04-24 09:37:46.4093 | INFO | Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(TasneemSami.ToDoList.Services.UserServices.LoginRequest) on controller AuthController (TasneemSami.ToDoList.Api).
+2025-04-24 09:37:46.4093 | DEBUG | Execution plan of authorization filters (in the following order): None
+2025-04-24 09:37:46.4093 | DEBUG | Execution plan of resource filters (in the following order): None
+2025-04-24 09:37:46.4093 | DEBUG | Execution plan of action filters (in the following order): Microsoft.AspNetCore.Mvc.ModelBinding.UnsupportedContentTypeFilter (Order: -3000), Microsoft.AspNetCore.Mvc.Infrastructure.ModelStateInvalidFilter (Order: -2000), TasneemSami.ToDoList.Api.Helper.LogActionFilter (Order: 0)
+2025-04-24 09:37:46.4093 | DEBUG | Execution plan of exception filters (in the following order): None
+2025-04-24 09:37:46.4093 | DEBUG | Execution plan of result filters (in the following order): Microsoft.AspNetCore.Mvc.Infrastructure.ClientErrorResultFilter (Order: -2000), TasneemSami.ToDoList.Api.Helper.LogActionFilter (Order: 0)
+2025-04-24 09:37:46.4122 | DEBUG | Executing controller factory for controller AuthController (TasneemSami.ToDoList.Api)
+2025-04-24 09:37:46.6459 | DEBUG | Executed controller factory for controller AuthController (TasneemSami.ToDoList.Api)
+2025-04-24 09:37:46.6602 | DEBUG | Attempting to bind parameter 'input' of type 'TasneemSami.ToDoList.Services.UserServices.LoginRequest' ...
+2025-04-24 09:37:46.6672 | DEBUG | Attempting to bind parameter 'input' of type 'TasneemSami.ToDoList.Services.UserServices.LoginRequest' using the name '' in request data ...
+2025-04-24 09:37:46.6672 | DEBUG | Selected input formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonInputFormatter' for content type 'application/json'.
+2025-04-24 09:37:46.6672 | DEBUG | Connection id "0HNC2V9SBU76U", Request id "0HNC2V9SBU76U:00000001": started reading request body.
+2025-04-24 09:37:46.6672 | DEBUG | Connection id "0HNC2V9SBU76U", Request id "0HNC2V9SBU76U:00000001": done reading request body.
+2025-04-24 09:37:46.6881 | DEBUG | JSON input formatter succeeded, deserializing to type 'TasneemSami.ToDoList.Services.UserServices.LoginRequest'
+2025-04-24 09:37:46.6881 | DEBUG | Done attempting to bind parameter 'input' of type 'TasneemSami.ToDoList.Services.UserServices.LoginRequest'.
+2025-04-24 09:37:46.6881 | DEBUG | Done attempting to bind parameter 'input' of type 'TasneemSami.ToDoList.Services.UserServices.LoginRequest'.
+2025-04-24 09:37:46.6881 | DEBUG | Attempting to validate the bound parameter 'input' of type 'TasneemSami.ToDoList.Services.UserServices.LoginRequest' ...
+2025-04-24 09:37:46.7134 | DEBUG | Done attempting to validate the bound parameter 'input' of type 'TasneemSami.ToDoList.Services.UserServices.LoginRequest'.
+2025-04-24 09:37:46.7488 | DEBUG | User Info:/-IP:localhost:7179-Browser:"Google Chrome";v="135", "Not-A.Brand";v="8", "Chromium";v="135"-Method:POST-Url:/api/Auth/login-Params:
+2025-04-24 09:37:46.7611 | INFO | Entity Framework Core 6.0.36 initialized 'ToDoListDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-04-24 09:37:46.7907 | DEBUG | Compiling query expression: 
+'DbSet<Users>()
+    .AsNoTracking()
+    .Where(c => c.UserName == __input_UserName_0)
+    .FirstOrDefault()'
+2025-04-24 09:37:46.9359 | DEBUG | Generated query execution expression: 
+'queryContext => new SingleQueryingEnumerable<Users>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache.SelectExpression(
+        Projection Mapping:
+            EmptyProjectionMember -> Dictionary<IProperty, int> { [Property: Users.ID (int) Required PK AfterSave:Throw ValueGenerated.OnAdd, 0], [Property: Users.PASSWORD (string) Required MaxLength(255), 1], [Property: Users.ROLE (int) Required, 2], [Property: Users.UserName (string) Required MaxLength(100), 3] }
+        SELECT TOP(1) u.ID, u.PASSWORD, u.ROLE, u.UserName
+        FROM Users AS u
+        WHERE u.UserName == @__input_UserName_0), 
+    Func<QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator, Users>, 
+    TasneemSami.ToDoList.Database.Data.ToDoListDbContext, 
+    False, 
+    False, 
+    True
+)
+    .SingleOrDefault()'
+2025-04-24 09:37:46.9530 | DEBUG | Creating DbCommand for 'ExecuteReader'.
+2025-04-24 09:37:46.9530 | DEBUG | Created DbCommand for 'ExecuteReader' (0ms).
+2025-04-24 09:37:46.9530 | DEBUG | Opening connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:46.9530 | DEBUG | Opened connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:46.9708 | DEBUG | Executing DbCommand [Parameters=[@__input_UserName_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[ID], [u].[PASSWORD], [u].[ROLE], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__input_UserName_0
+2025-04-24 09:37:47.0411 | INFO | Executed DbCommand (80ms) [Parameters=[@__input_UserName_0='?' (Size = 100)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [u].[ID], [u].[PASSWORD], [u].[ROLE], [u].[UserName]
+FROM [Users] AS [u]
+WHERE [u].[UserName] = @__input_UserName_0
+2025-04-24 09:37:47.0411 | DEBUG | A data reader was disposed.
+2025-04-24 09:37:47.0411 | DEBUG | Closing connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:47.0411 | DEBUG | Closed connection to database 'ToDoListDb' on server '(localdb)\mssqllocaldb'.
+2025-04-24 09:37:47.8181 | DEBUG | List of registered output formatters, in the following order: Microsoft.AspNetCore.Mvc.Formatters.HttpNoContentOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StringOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.StreamOutputFormatter, Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter
+2025-04-24 09:37:47.8181 | DEBUG | No information found on request to perform content negotiation.
+2025-04-24 09:37:47.8181 | DEBUG | Attempting to select an output formatter without using a content type as no explicit content types were specified for the response.
+2025-04-24 09:37:47.8181 | DEBUG | Attempting to select the first formatter in the output formatters list which can write the result.
+2025-04-24 09:37:47.8181 | DEBUG | Selected output formatter 'Microsoft.AspNetCore.Mvc.Formatters.SystemTextJsonOutputFormatter' and content type 'application/json' to write the response.
+2025-04-24 09:37:47.8181 | INFO | Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2025-04-24 09:37:47.8181 | INFO | Executed action AuthController.Login (TasneemSami.ToDoList.Api) in 1416.7648ms
+2025-04-24 09:37:47.8181 | INFO | Executed endpoint 'AuthController.Login (TasneemSami.ToDoList.Api)'
+2025-04-24 09:37:47.8181 | DEBUG | 'ToDoListDbContext' disposed.
+2025-04-24 09:37:47.8415 | INFO | Request finished HTTP/2 POST https://localhost:7179/api/Auth/login application/json 51 - 200 - application/json;+charset=utf-8 1660.5400ms
+2025-04-24 09:37:48.1842 | DEBUG | Connection id "0HNC2V9SBU76U" received FIN.
+2025-04-24 09:37:48.1842 | DEBUG | Connection id "0HNC2V9SBU76U" is closed. The last processed stream ID was 1.
+2025-04-24 09:37:48.1842 | DEBUG | Connection id "0HNC2V9SBU76U" sending FIN because: "The Socket transport's send loop completed gracefully."
+2025-04-24 09:37:48.1842 | DEBUG | Connection id "0HNC2V9SBU76U" stopped.

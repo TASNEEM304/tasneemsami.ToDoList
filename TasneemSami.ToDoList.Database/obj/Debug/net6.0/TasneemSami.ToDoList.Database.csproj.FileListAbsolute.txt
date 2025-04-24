@@ -1,0 +1,15 @@
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\bin\Debug\net6.0\TasneemSami.ToDoList.Database.deps.json
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\bin\Debug\net6.0\TasneemSami.ToDoList.Database.runtimeconfig.json
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\bin\Debug\net6.0\TasneemSami.ToDoList.Database.dll
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\bin\Debug\net6.0\TasneemSami.ToDoList.Database.pdb
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\obj\Debug\net6.0\TasneemSami.ToDoList.Database.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\obj\Debug\net6.0\TasneemSami.ToDoList.Database.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\obj\Debug\net6.0\TasneemSami.ToDoList.Database.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\obj\Debug\net6.0\TasneemSami.ToDoList.Database.AssemblyInfo.cs
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\obj\Debug\net6.0\TasneemSami.ToDoList.Database.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\obj\Debug\net6.0\TasneemSami.ToDoList.Database.sourcelink.json
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\obj\Debug\net6.0\TasneemSami.ToDoList.Database.dll
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\obj\Debug\net6.0\refint\TasneemSami.ToDoList.Database.dll
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\obj\Debug\net6.0\TasneemSami.ToDoList.Database.pdb
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\obj\Debug\net6.0\TasneemSami.ToDoList.Database.genruntimeconfig.cache
+C:\Users\Asus\Desktop\TasneemSami.ToDoList.Api\TasneemSami.ToDoList.Database\obj\Debug\net6.0\ref\TasneemSami.ToDoList.Database.dll

@@ -1,0 +1,22 @@
+# Build artifacts
+.vs/
+bin/
+obj/
+# User-specific files
+*.user
+*.suo
+
+# Visual Studio
+.vscode/
+
+# Logs
+*.log
+
+# ASP.NET Core
+appsettings.Development.json
+appsettings.Local.json
+
+# Others
+*.db
+*.sqlite
+*.bak
