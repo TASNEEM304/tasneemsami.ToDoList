@@ -19,7 +19,7 @@ The project is organized into three main layers:
 
 - ✅ JWT Authentication & Role-based Authorization
 - ✅ Admin can Add/Edit/Delete tasks
-- ✅ Users can only view tasks
+- ✅ Users can only view tasks and complete Task 
 - ✅ Entity Framework Core with Code-First Migrations
 - ✅ Unit Testing with Moq
 - ✅ Swagger UI for API testing
